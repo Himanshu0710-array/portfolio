@@ -283,6 +283,34 @@
       font-weight: 500;
     }
 
+    .leetcode-stats {
+      margin-top: 4rem;
+      max-width: 1100px;
+    }
+
+    .leetcode-stats-heading {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .leetcode-img-link {
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    .leetcode-img-link:hover {
+      transform: translateY(-4px);
+    }
+
+    .leetcode-img-link img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+
     /* SKILLS */
     #skills {
       background: var(--bg);
@@ -404,6 +432,79 @@
     .project-row:hover .project-arrow {
       color: var(--accent);
       transform: translate(3px, -3px);
+    }
+
+    /* CERTIFICATIONS */
+    #certifications {
+      background: var(--bg);
+    }
+
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 1100px;
+    }
+
+    .cert-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .cert-row:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cert-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .cert-title {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .cert-issuer {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .cert-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      background: transparent;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .cert-link:hover {
+      border-color: var(--text);
+    }
+
+    .hidden-cert {
+      display: none !important;
+    }
+
+    .cert-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
     }
 
     /* CONTACT */
@@ -621,6 +722,12 @@
         grid-template-columns: 2rem 1fr auto;
       }
 
+      .cert-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
       footer {
         padding: 2rem;
         flex-direction: column;
@@ -654,6 +761,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certificates</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -703,6 +811,15 @@
           <strong>grow as a developer</strong> and contribute to meaningful, real-world projects.
         </p>
       </div>
+    </div>
+
+    <div class="leetcode-stats reveal">
+      <h3 class="leetcode-stats-heading">Live Coding Activity</h3>
+      <a href="https://leetcode.com/u/Himanshu1007/" target="_blank" class="leetcode-img-link">
+        <img
+          src="https://leetcard.jacoblin.cool/Himanshu1007?theme=light&font=DM%20Sans&ext=heatmap"
+          alt="Himanshu1007 LeetCode Stats">
+      </a>
     </div>
   </section>
 
@@ -823,6 +940,73 @@
     </div>
   </section>
 
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section-label reveal">Certificates</div>
+    <h2 class="section-title reveal">My Certifications & Achievements.</h2>
+    <div class="cert-list">
+      <div class="cert-row reveal">
+        <div class="cert-info">
+          <div class="cert-title">Fundamentals of Deep Learning</div>
+          <div class="cert-issuer">NVIDIA Deep Learning Institute</div>
+        </div>
+        <a href="certificates/nvidia_dl.pdf" target="_blank" class="cert-link">View Certificate ↗</a>
+      </div>
+      <div class="cert-row reveal">
+        <div class="cert-info">
+          <div class="cert-title">Advance Web Development Training</div>
+          <div class="cert-issuer">Potential Tutorial (Full Stack Developer)</div>
+        </div>
+        <a href="certificates/potential_tutorial.png" target="_blank" class="cert-link">View Certificate ↗</a>
+      </div>
+      <div class="cert-row reveal">
+        <div class="cert-info">
+          <div class="cert-title">Web Designing using PhpMySQL Internship</div>
+          <div class="cert-issuer">Centre for Electronic Governance</div>
+        </div>
+        <a href="certificates/ceg_internship.pdf" target="_blank" class="cert-link">View Certificate ↗</a>
+      </div>
+      <div class="cert-row reveal hidden-cert-item hidden-cert">
+        <div class="cert-info">
+          <div class="cert-title">INNOVICION HACKATHON Participant</div>
+          <div class="cert-issuer">ICI FEST '25 / SKIT</div>
+        </div>
+        <a href="certificates/ici_fest.pdf" target="_blank" class="cert-link">View Certificate ↗</a>
+      </div>
+      <div class="cert-row reveal hidden-cert-item hidden-cert">
+        <div class="cert-info">
+          <div class="cert-title">JECRC Cloud Summit 2026</div>
+          <div class="cert-issuer">JECRC Foundation</div>
+        </div>
+        <a href="certificates/jecrc_cloud.png" target="_blank" class="cert-link">View Certificate ↗</a>
+      </div>
+      <div class="cert-row reveal hidden-cert-item hidden-cert">
+        <div class="cert-info">
+          <div class="cert-title">Agentblazer Workshop</div>
+          <div class="cert-issuer">Trailhead by Salesforce</div>
+        </div>
+        <a href="certificates/agentblazer_workshop.pdf" target="_blank" class="cert-link">View Certificate ↗</a>
+      </div>
+      <div class="cert-row reveal hidden-cert-item hidden-cert">
+        <div class="cert-info">
+          <div class="cert-title">Data Analytics Job Simulation</div>
+          <div class="cert-issuer">Deloitte</div>
+        </div>
+        <a href="certificates/deloitte_data_analytics.pdf" target="_blank" class="cert-link">View Certificate ↗</a>
+      </div>
+      <div class="cert-row reveal hidden-cert-item hidden-cert">
+        <div class="cert-info">
+          <div class="cert-title">Data Structures in C++ Course</div>
+          <div class="cert-issuer">Scaler Topics</div>
+        </div>
+        <a href="certificates/scaler_dsa_cpp.pdf" target="_blank" class="cert-link">View Certificate ↗</a>
+      </div>
+    </div>
+    <div class="cert-actions reveal">
+      <button id="showMoreBtn" class="btn-secondary" style="cursor: pointer;">Show More Certificates ↓</button>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact">
     <div class="section-label">Contact</div>
@@ -831,8 +1015,7 @@
       <div class="contact-left reveal">
         <p>I'm actively seeking internship and full-time opportunities in software development and AI/ML. Whether you
           have a project, an opening, or just want to connect — feel free to reach out.</p>
-        <!-- Update this with your real email -->
-        <a href="mailto:himanshuchandlani07@gmail.com" class="contact-email">himanshuchandlani07@gmail.com</a>
+        <a href="mailto:himanshu@example.com" class="contact-email">himanshu@example.com</a>
         <div class="contact-links">
           <a href="https://github.com/Himanshu0710-array" target="_blank" class="contact-link">GitHub</a>
           <a href="https://www.linkedin.com/in/himanshu-chandlani-568b04285/" target="_blank"
@@ -840,27 +1023,21 @@
           <a href="resume.pdf" target="_blank" class="contact-link">Resume</a>
         </div>
       </div>
-      <!-- We are using FormSubmit (https://formsubmit.co/) to handle form submissions without a backend. -->
-      <!-- Replace 'your-email@example.com' with your actual email address -->
-      <form action="https://formsubmit.co/himanshuchandlani07@gmail.com" method="POST" class="contact-form reveal">
-        <!-- Optional: disable the captcha step -->
-        <input type="hidden" name="_captcha" value="false">
-
+      <div class="contact-form reveal">
         <div class="form-group">
           <label class="form-label">Your Name</label>
-          <input type="text" name="name" class="form-input" placeholder="Jane Smith" required>
+          <input type="text" class="form-input" placeholder="Jane Smith">
         </div>
         <div class="form-group">
           <label class="form-label">Email</label>
-          <input type="email" name="email" class="form-input" placeholder="jane@company.com" required>
+          <input type="email" class="form-input" placeholder="jane@company.com">
         </div>
         <div class="form-group">
           <label class="form-label">Message</label>
-          <textarea name="message" class="form-textarea" placeholder="Tell me about the opportunity or project..."
-            required></textarea>
+          <textarea class="form-textarea" placeholder="Tell me about the opportunity or project..."></textarea>
         </div>
-        <button type="submit" class="btn-submit">Send Message</button>
-      </form>
+        <button class="btn-submit">Send Message</button>
+      </div>
     </div>
   </section>
 
@@ -871,6 +1048,27 @@
   </footer>
 
   <script>
+    // Show More Certificates Logic
+    const showMoreBtn = document.getElementById('showMoreBtn');
+    const hiddenCerts = document.querySelectorAll('.hidden-cert-item');
+    let isShowingMore = false;
+
+    if (showMoreBtn) {
+      showMoreBtn.addEventListener('click', () => {
+        isShowingMore = !isShowingMore;
+        hiddenCerts.forEach(cert => {
+          if (isShowingMore) {
+            cert.classList.remove('hidden-cert');
+            setTimeout(() => cert.classList.add('visible'), 50);
+          } else {
+            cert.classList.add('hidden-cert');
+            cert.classList.remove('visible');
+          }
+        });
+        showMoreBtn.innerHTML = isShowingMore ? 'Show Less Certificates ↑' : 'Show More Certificates ↓';
+      });
+    }
+
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
